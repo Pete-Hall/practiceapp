@@ -3,12 +3,12 @@ import {useSelector} from 'react-redux';
 
 function Description() {
 
-  // const store = useSelector((store) => store);
-  // const [heading, setHeading] = useState('Functional Component');
+  const description = useSelector((state) => state.description.value);
 
   return (
     <div>
       <h3>Description</h3>
+      <p>{description}</p>
     </div>
   );
   
