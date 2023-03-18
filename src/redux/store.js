@@ -1,11 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import descriptionSlice from "./descriptionSlice";
+import errorSlice from "./errorSlice";
 
 export const store = configureStore({
   reducer: {
-    description: descriptionSlice
-    // flag reducer
-    // delete reducer
-    // comments reducer
-  }
+    error: errorSlice
+  },
 });
