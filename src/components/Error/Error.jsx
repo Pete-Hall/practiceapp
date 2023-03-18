@@ -14,7 +14,7 @@ function Error() {
     dispatch(getErrors());
   }, [])
 
-  const errors = useSelector((state) => state.error.value);
+  const errors = useSelector((state) => state.errors.value);
 
   return (
     <div>

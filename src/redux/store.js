@@ -3,6 +3,6 @@ import errorSlice from "./errorSlice";
 
 export const store = configureStore({
   reducer: {
-    error: errorSlice
+    errors: errorSlice
   },
 });
