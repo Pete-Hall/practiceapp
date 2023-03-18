@@ -4,14 +4,19 @@ const initialState = {
   value: "No errors",
 }
 
+function test() {
+  return "test";
+}
+
 export const errorSlice = createSlice({
   name: 'errors',
   initialState,
   reducers: {
     getErrors: (state, action) => {
-      // do old school redux/saga type code here to call axios, get response, and update state.value???
-      let x = "x";
+
+      let x = test();
       console.log("Hello from getErrors: " + x);
+
       // state.value = action.payload
     },
   },
