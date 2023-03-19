@@ -7,7 +7,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import { getErrors } from '../../redux/errorSlice';
 import { useGetErrorsQuery } from '../../redux/apiSlice';
 
-
+// this could be deleted and Description, Delete, Flag, Comments could be adjusted (I think) - maybe along with how we handle content and what we return
 let ErrorExcerpt = ({ errorToShow }) => {
   return (
     <p>{JSON.stringify(errorToShow)}</p>
