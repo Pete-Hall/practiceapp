@@ -4,7 +4,7 @@ import errorSlice from "./errorSlice";
 
 export const store = configureStore({
   reducer: {
-    errors: errorSlice,
+    // errors: errorSlice,
     [apiSlice.reducerPath]: apiSlice.reducer
   },
   middleware: getDefaultMiddleware =>

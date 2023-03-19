@@ -4,6 +4,7 @@ const pool = require('../modules/pool');
 
 const errors = [
   {
+    id: "1",
     description: "Test description",
     flag: "Test flag",
     comments: "Test comments"
@@ -11,6 +12,9 @@ const errors = [
 ];
 
 router.get('/', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   console.log("hello from getErrors.router");
   res.send(errors);
 });
