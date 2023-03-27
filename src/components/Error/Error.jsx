@@ -5,7 +5,7 @@ import Description from '../Description/Description';
 import Flag from '../Flag/Flag';
 import {useDispatch, useSelector} from 'react-redux';
 import { getErrors } from '../../redux/errorSlice';
-import { useGetErrorsQuery } from '../../redux/apiSlice';
+import { useGetErrorsQuery, useGetSingleErrorQuery } from '../../redux/apiSlice';
 
 // this could be deleted and Description, Delete, Flag, Comments could be adjusted (I think) - maybe along with how we handle content and what we return
 let ErrorExcerpt = ({ errorToShow }) => {
@@ -15,15 +15,25 @@ let ErrorExcerpt = ({ errorToShow }) => {
 }
 
 export const ErrorList = () => {
+
   const {
     data: errors,
     isLoading,
     isSuccess,
     isError,
     error
-  } = useGetErrorsQuery()
+  } = useGetErrorsQuery();
 
-  let content
+  const {
+    data: singleError,
+    isLoading: singleIsLoading,
+    isSuccess: singleIsSuccess,
+    isError: singleIsError,
+    error: singleErrorError
+  } = useGetSingleErrorQuery("1");
+
+  let content;
+  let singleContent;
 
   if(isLoading) {
     content = <p>Loading...</p>
@@ -33,10 +43,21 @@ export const ErrorList = () => {
     content = <div>{error.toString()}</div>
   }
 
+  if(singleIsLoading) {
+    singleContent = <p>Loading...</p>
+  } else if(singleIsSuccess) {
+    console.log(singleError);
+    singleContent = singleError.map(errorToShow => <ErrorExcerpt key={errorToShow.id} errorToShow={errorToShow} />)
+  } else if(singleIsError) {
+    singleContent = <div>{singleErrorError.toString()}</div>
+  }
+
   return (
     <section>
-      <h2>Errors</h2>
+      <h2>Errors from RTK Query</h2>
       {content}
+      <h2>Single Error from RTK Query</h2>
+      {singleContent}
     </section>
   )
 }

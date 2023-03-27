@@ -15,9 +15,12 @@ export const apiSlice = createApi({
     getErrors: builder.query({
       // The URL for the request is '/fakeApi/posts'
       query: () => '/api/getErrors'
+    }),
+    getSingleError: builder.query({
+      query: (errorID) => `/api/getSingleError/${errorID}`
     })
   })
 });
 
 // Export the auto-generated hook for the `getPosts` query endpoint
-export const { useGetErrorsQuery } = apiSlice;
+export const { useGetErrorsQuery, useGetSingleErrorQuery } = apiSlice;
