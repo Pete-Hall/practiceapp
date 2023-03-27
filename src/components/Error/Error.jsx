@@ -46,8 +46,7 @@ export const ErrorList = () => {
   if(singleIsLoading) {
     singleContent = <p>Loading...</p>
   } else if(singleIsSuccess) {
-    console.log(singleError);
-    singleContent = singleError.map(errorToShow => <ErrorExcerpt key={errorToShow.id} errorToShow={errorToShow} />)
+    singleContent = singleError.map(errorToShow => <ErrorExcerpt key={errorToShow.id} errorToShow={errorToShow} />) // comes back as an array of objects, which is why we can map
   } else if(singleIsError) {
     singleContent = <div>{singleErrorError.toString()}</div>
   }
