@@ -1,8 +1,8 @@
 import React from 'react';
-import { useGetSingleErrorQuery } from '../../redux/apiSlice';
+import { useGetErrorsQuery } from '../../redux/apiSlice';
 import { ErrorExcerpt } from './ErrorExcerpt';
 
-export const SingleErrorContent = () => {
+export const AllErrorContent = () => {
   
   const {
     data: singleError,
@@ -10,7 +10,7 @@ export const SingleErrorContent = () => {
     isSuccess,
     isError,
     error
-  } = useGetSingleErrorQuery("1");
+  } = useGetErrorsQuery("1");
 
   let content;
 
