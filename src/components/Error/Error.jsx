@@ -6,13 +6,7 @@ import Flag from '../Flag/Flag';
 import {useDispatch, useSelector} from 'react-redux';
 import { getErrors } from '../../redux/errorSlice';
 import { useGetErrorsQuery, useGetSingleErrorQuery } from '../../redux/apiSlice';
-
-// this could be deleted and Description, Delete, Flag, Comments could be adjusted (I think) - maybe along with how we handle content and what we return
-let ErrorExcerpt = ({ errorToShow }) => {
-  return (
-    <p>{JSON.stringify(errorToShow)}</p>
-  )
-}
+import { ErrorExcerpt } from './ErrorExcerpt';
 
 export const ErrorList = () => {
 
