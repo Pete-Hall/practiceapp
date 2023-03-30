@@ -1,6 +1,7 @@
 import React from 'react';
 import { SingleErrorContent } from './SingleError';
 import { AllErrorContent } from './AllErrors';
+import { SingleErrorMultipleParamsContent } from './SingleErrorMultipleParams';
 
 export const ErrorList = () => {
 
@@ -10,6 +11,8 @@ export const ErrorList = () => {
       <AllErrorContent />
       <h2>Single Error from RTK Query</h2>
       <SingleErrorContent />
+      <h2>Single Error Multiple Params from RTK Query</h2>
+      <SingleErrorMultipleParamsContent />
     </section>
   )
 }

@@ -6,13 +6,13 @@ const errors = [
   {
     id: "1",
     description: "Test 1 description",
-    flag: "Test 1 flag",
+    flag: "True",
     comments: "Test 1 comments"
   },
   {
     id: "2",
     description: "Test 2 description",
-    flag: "Test 2 flag",
+    flag: "False",
     comments: "Test 2 comments"
   },
 ];

@@ -18,9 +18,12 @@ export const apiSlice = createApi({
     }),
     getSingleError: builder.query({
       query: (errorID) => `/api/getSingleError/${errorID}`
+    }),
+    getSingleErrorMultipleParams: builder.query({
+      query: ({errorID, errorFlag}) => `/api/getSingleError/multiple/${errorID}&${errorFlag}`
     })
   })
 });
 
 // Export the auto-generated hook for the `getPosts` query endpoint
-export const { useGetErrorsQuery, useGetSingleErrorQuery } = apiSlice;
+export const { useGetErrorsQuery, useGetSingleErrorQuery, useGetSingleErrorMultipleParamsQuery } = apiSlice;
