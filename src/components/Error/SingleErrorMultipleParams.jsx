@@ -10,7 +10,7 @@ export const SingleErrorMultipleParamsContent = () => {
     isSuccess,
     isError,
     error
-  } = useGetSingleErrorMultipleParamsQuery({errorID: "1", errorFlag: "True"});
+  } = useGetSingleErrorMultipleParamsQuery({errorID: "1", errorFlag: "True"}); // TODO: How do I make this input dynamic/chosen by the user?
 
   let content;
 
