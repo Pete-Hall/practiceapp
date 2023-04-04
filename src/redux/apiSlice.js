@@ -20,7 +20,7 @@ export const apiSlice = createApi({
       query: (errorID) => `/api/getSingleError/${errorID}`
     }),
     getSingleErrorMultipleParams: builder.query({
-      query: ({errorID, errorFlag}) => `/api/getSingleError/multiple/${errorID}&${errorFlag}`
+      query: ({errorID, errorFlag}) => `/api/getSingleError?id=${errorID}&flag=${errorFlag}`
     })
   })
 });

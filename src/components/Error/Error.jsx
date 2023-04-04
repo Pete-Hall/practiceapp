@@ -11,7 +11,7 @@ export const ErrorList = () => {
       <AllErrorContent />
       <h2>Single Error from RTK Query</h2>
       <SingleErrorContent />
-      <h2>Single Error Multiple Params from RTK Query</h2>
+      <h2>Single Error Multiple Query Params from RTK Query</h2>
       <SingleErrorMultipleParamsContent />
     </section>
   )
