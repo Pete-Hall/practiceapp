@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
 
   let queryString = `SELECT * FROM rtkquery ORDER BY id ASC;`
+  
   pool.query(queryString).then((results) => {
     console.log("hello from getErrors.router", results.rows);
     res.send(results.rows);
@@ -16,6 +17,7 @@ router.get('/', (req, res) => {
     console.log(err);
     res.sendStatus(500);
   })
+
 });
 
 module.exports = router;

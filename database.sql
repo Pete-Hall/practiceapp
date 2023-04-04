@@ -1,3 +1,5 @@
+-- This uses a Postgres database running on Postico
+
 -- Create table in database
 CREATE TABLE "rtkquery" (
     "id" SERIAL PRIMARY KEY,
