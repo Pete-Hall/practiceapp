@@ -10,7 +10,7 @@ export const AddError = () => {
   
   return(
     <div>
-      <input type="text" onChange={(e) => setNewError(e.target.value)}/>
+      <input type="text" placeholder="Enter description" onChange={(e) => setNewError(e.target.value)}/>
     </div>
   )
   
