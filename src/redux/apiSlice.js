@@ -24,7 +24,7 @@ export const apiSlice = createApi({
     }),
     addNewError: builder.mutation({
       query: initialError => ({
-        url: '/addError',
+        url: '/api/addError',
         method: 'POST',
         body: initialError
       })

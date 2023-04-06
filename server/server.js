@@ -5,14 +5,16 @@ const app = express();
 
 // Routers
 const getErrorsRouter = require('./routers/getErrors.router');
-const getSingleError = require('./routers/getSingleError.router');
+const getSingleErrorRouter = require('./routers/getSingleError.router');
+const addErrorRouter = require('./routers/addError.router');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Endpoints
 app.use('/api/getErrors', getErrorsRouter);
-app.use('/api/getSingleError', getSingleError);
+app.use('/api/getSingleError', getSingleErrorRouter);
+app.use('/api/addError', addErrorRouter);
 
 app.use(express.static('build'));
 

@@ -7,15 +7,12 @@ export const AddError = () => {
 
   const [newError, setNewError] = useState('');
 
-  useEffect(() => {
-    console.log(newError);
-  }, [newError]);
-
   const canSave =[newError].every(Boolean) && !isLoading;
 
   const onSave = async() => {
     if(canSave) {
       try {
+        console.log({newError});
         await addNewError({newError}).unwrap();
         setNewError('');
       } catch(err) {
