@@ -37,5 +37,5 @@ export const {
   useGetErrorsQuery,
   useGetSingleErrorQuery,
   useGetSingleErrorMultipleParamsQuery,
-  useAddNewErrorMutation,
+  useAddNewErrorMutation
 } = apiSlice;

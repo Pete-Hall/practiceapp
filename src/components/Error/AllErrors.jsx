@@ -10,7 +10,7 @@ export const AllErrorContent = () => {
     isSuccess,
     isError,
     error
-  } = useGetErrorsQuery("1"); // TODO: How do I make this input dynamic/chosen by the user?
+  } = useGetErrorsQuery();
 
   let content;
 
